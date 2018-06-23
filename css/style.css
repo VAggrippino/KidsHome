@@ -13,7 +13,6 @@
 
 body {
   margin: 0;
-  overflow: hidden;
 }
 
 .content {
@@ -39,54 +38,76 @@ header h1 {
 }
 
 main {
-  height: calc(100vh - var(--header-height));
+  --min-row-height: 175px;
+
+  width: calc(100vw - 1rem);
+  height: calc(100vh - var(--header-height) - 1rem);
+  margin: 0.5rem;
   display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 0.5rem;
+  /*
+  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(var(--min-row-height), 1fr));
+  */
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
   justify-items: stretch;
   align-items: stretch;
-  padding: 1rem;
   box-sizing: border-box;
 }
 
-figure {
-  margin: 0;
-  border: 1px solid transparent;
-  transition: all 0.5s;
-  background-color: pink;
-  border-radius: 1rem;
+.game-link {
+  --description-height: 2.5em;
+  --image-row-height: calc(100% - var(--description-height));
+
+  /*
+  min-height: var(--min-row-height);
+  */
+  font-size: 11px;
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-gap: 1rem;
-  justify-items: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-figure a {
-  display: block;
-  padding: 1rem;
+  grid-template-columns: 100%;
+  grid-template-rows: var(--image-row-height) var(--description-height);
+  background: var(--light-primary-color);
+  place-items: center center;
+  text-decoration: none;
+  color: var(--secondary-text-color);
   box-sizing: border-box;
+  border: 1px solid var(--light-primary-color);
+  transition: border-color 0.5s;
+  border-radius: 0.5rem;
 }
 
-figure img {
-  width: 100%;
+.game-link:hover {
+  border-color: blue;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.game-link--image {
+  max-width: 100%;
+  max-height: var(--image-row-height);
+  padding: 1em;
+  box-sizing: border-box;
   object-fit: contain;
 }
 
-figcaption {
-  padding: 1rem;
+.game-link--description {
+  text-align: center;
+  padding: 1em;
   box-sizing: border-box;
-  font-size: calc(6px + 12 * ((100vw - 800px) / 1024));
 }
 
-@media screen and (min-width: 1024px) {
-  figcaption {
-    font-size: 18px;
+@media screen and (min-width: 800px) {
+  main {
+    /*
+    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(var(--min-row-height), 1fr));
+    */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
   }
-}
 
-figure:hover {
-  border: 1px solid blue;
+  .game-link {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+  }
 }
