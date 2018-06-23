@@ -61,6 +61,7 @@ figure {
   grid-gap: 1rem;
   justify-items: center;
   align-items: center;
+  cursor: pointer;
 }
 
 figure a {
