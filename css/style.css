@@ -77,12 +77,12 @@ figure img {
 figcaption {
   padding: 1rem;
   box-sizing: border-box;
-  font-size: calc(6px + 14 * ((100vw - 800px) / 1440));
+  font-size: calc(6px + 12 * ((100vw - 800px) / 1024));
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   figcaption {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
