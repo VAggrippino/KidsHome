@@ -45,10 +45,6 @@ main {
   margin: 0.5rem;
   display: grid;
   grid-gap: 0.5rem;
-  /*
-  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(var(--min-row-height), 1fr));
-  */
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(4, 1fr);
   justify-items: stretch;
@@ -60,9 +56,6 @@ main {
   --description-height: 2.5em;
   --image-row-height: calc(100% - var(--description-height));
 
-  /*
-  min-height: var(--min-row-height);
-  */
   font-size: 11px;
   display: grid;
   grid-template-columns: 100%;
@@ -98,10 +91,6 @@ main {
 
 @media screen and (min-width: 800px) {
   main {
-    /*
-    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
-    grid-template-rows: repeat(auto-fill, minmax(var(--min-row-height), 1fr));
-    */
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
   }
