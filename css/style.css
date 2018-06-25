@@ -56,7 +56,6 @@ main {
   --description-height: 2.5em;
   --image-row-height: calc(100% - var(--description-height));
 
-  font-size: 11px;
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: var(--image-row-height) var(--description-height);
