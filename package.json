@@ -1,0 +1,25 @@
+{
+  "name": "kidshome",
+  "version": "1.0.0",
+  "description": "Collection of Kid-friendly links",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VAggrippino/KidsHome.git"
+  },
+  "author": "Vince Aggrippino",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/VAggrippino/KidsHome/issues"
+  },
+  "homepage": "https://github.com/VAggrippino/KidsHome#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0"
+  }
+}
